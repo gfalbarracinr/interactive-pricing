@@ -75,6 +75,24 @@
   width: 100%;
 }
 
+.month-switch {
+  position: absolute;
+  height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.label-switch {
+  width: 40px;
+	height: 20px;
+	display: block;
+	position: relative;
+}
+.switch-container {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+}
 /* || SPACING */
 
 .attribution {
@@ -98,8 +116,12 @@
 
 .subscription {
   margin-top: auto;
-  margin-left: 10%;
+  margin-left: 5%;
   text-align: right;
+}
+
+.subscription-element {
+  margin-right: 10px;
 }
 
 .features {
@@ -207,6 +229,30 @@
   font-size: 90%;
   color: var(--text-color);
 }
+
+.label-switch {
+  background: var(--toggle-background-color);
+  cursor: pointer;
+	border-radius: 20px;
+}
+
+.label-switch::after {
+  content: '';
+	position: absolute;
+  left: 0;
+	width: 20px;
+	height: 20px;
+	background: var(--slider-background-color-blank);
+	border-radius: 50%;
+	transition: 0.3s;
+}
+
+
+.month-switch:checked + .label-switch:after {
+	left: 100%;
+	transform: translateX(-100%);
+}
+
 /* || MEDIA QUERIES */
 
 @media screen and (min-width: 1400px) {

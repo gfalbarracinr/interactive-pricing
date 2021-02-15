@@ -22,8 +22,11 @@
       <form class="price">
         <input class="price-slider" id="priceSlider" type="range" min="1" max="100" value="50"/>
         <section class="subscription">
-          <span> Monthly Billing</span>
-          <span>Yearly Billing <p class="subcription-discount">25% discount</p></span>
+          <span class="subscription-element"> Monthly Billing</span>
+          <span class="switch-container subscription-element">
+            <input type="checkbox" id="switch" class="month-switch subscription-element" /><label for="switch" class="label-switch"></label>
+          </span>
+          <span> <span class="subscription-element">Yearly Billing</span> <p class="subcription-discount">25% discount</p></span>
         </section>
       </form>
       <section class="features">
